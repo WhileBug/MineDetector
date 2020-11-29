@@ -1,0 +1,20 @@
+{
+    "name": "MineDetector",
+    "manifest_version": 2,
+    "version": "1.0",
+    "description": "The extension for MineDetector to collect data from websites.",
+    "browser_action": {
+      "default_icon":"MineDetector.png",
+      "default_title": "MineDetector",
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "scripts": ["js/background.js"]
+    },
+    "content_scripts": [
+      {
+        "matches": [ "<all_urls>" ],
+        "js": [ "js/jquery.min.js", "js/content-script.js" ]
+      }
+    ]
+  }
